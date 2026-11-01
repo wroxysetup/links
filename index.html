@@ -11,7 +11,7 @@
 <meta name="twitter:card" content="summary">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%2315171C'/%3E%3Ctext x='16' y='21' font-size='13' font-weight='700' text-anchor='middle' fill='%23F5F6F8' font-family='sans-serif'%3EWR%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Space+Grotesk:wght@500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap">
 <style>:root{--bg:#08090B;--bg2:#101217;--card:#15171C;--tx:#F5F6F8;--tx2:#9299A6;--ac:#438BEE;--bd:rgba(255,255,255,.07);--r:16px}
 *{box-sizing:border-box;margin:0}html{scroll-behavior:smooth;scroll-padding-top:64px}
 body{background:var(--bg);color:var(--tx);font:400 15px/1.5 "DM Sans",system-ui,sans-serif;min-height:100vh;
@@ -84,18 +84,21 @@ dialog{background:var(--card);color:var(--tx);border:1px solid var(--bd);border-
 .rp{position:absolute;border-radius:50%;background:rgba(67,139,238,.5);transform:scale(0);animation:rp .65s ease-out forwards;pointer-events:none;z-index:-1}
 @keyframes rp{to{transform:scale(1);opacity:0}}
 @media(prefers-reduced-motion:reduce){.rp,.c::after{display:none}}
+
+.logo-tx{display:grid;place-items:center;background:linear-gradient(135deg,#1b2a44,#15171C 70%);font:700 1.45rem/1 "Space Grotesk",system-ui,sans-serif;letter-spacing:-.03em;color:#fff;text-shadow:0 0 18px rgba(67,139,238,.7)}
+.setup.ph{border-style:dashed}.ph-in{padding:28px 20px;text-align:center;color:var(--tx2);font-size:.9rem}
 </style>
 </head>
 <body>
 <canvas id="sky" aria-hidden="true"></canvas>
 <main class="wrap" id="pub">
  <header class="p">
-  <img class="logo" src="images/profil.jpg" alt="WROXY SETUP profil fotoğrafı" width="92" height="92">
+  <div class="logo logo-tx" role="img" aria-label="Wroxy">Wroxy</div>
   <h1 id="name">WROXY SETUP</h1><p class="u" id="user">@wroxysetup</p>
   <p class="d" id="desc"></p><div class="soc" id="soc"></div>
  </header>
 
- <figure class="setup"><img src="images/setup.jpg" alt="WROXY SETUP masa düzeni: kavisli ve dikey monitör, beyaz masa, LED şerit" loading="lazy"><figcaption>Setup'ım</figcaption></figure>
+ <figure class="setup ph"><div class="ph-in">Geçici olarak burada resim kullanamıyorum fakat bu kısmı yakın zamanda halledeceğim.</div></figure>
  <div class="sr"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg><input id="q" type="search" placeholder="Ürün ara: klavye, monitör, kasa…" aria-label="Ürün ara" autocomplete="off" enterkeyhint="search"></div>
  <nav class="cn" id="cn" aria-label="Kategoriler"></nav>
  <p class="d" id="none" hidden style="text-align:center;margin:32px auto 0">Sonuç bulunamadı. Başka bir kelime dene.</p>
